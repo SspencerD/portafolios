@@ -7,6 +7,7 @@ import searchNameTech from "@/utils/searchTech";
 interface CardsProps {
   data:{
     name:string;
+    slug?:string;
     description: string;
     image:string;
     logo?:string | null;
@@ -20,6 +21,7 @@ interface CardsProps {
 const CardProyectComponent = (props:CardsProps) => {
   const {
     name,
+    slug,
     description,
     image,
     logo,
@@ -69,7 +71,9 @@ const CardProyectComponent = (props:CardsProps) => {
           title="Ver"
           size="small"
           shape="rounded"
-          onClick={() => {}}
+          onClick={() => {
+            window.location.href= `${slug}`;
+          }}
         />
         <div>
           <Typography

@@ -1,0 +1,41 @@
+---
+import Typography from "@/components/TypographyComponent";
+import Layout from "../../layouts/Layout.astro"
+import {projects} from "@/data/projects";
+import CardProyectComponent from "@/components/CardProyectComponent";
+---
+
+<Layout>
+    
+    <section class="p-8 mt-8 md:justify-start md:flex-row">
+
+        <Typography 
+            type="h2"
+            color="primary"
+            size="extra-large"
+            weight="bold"
+            family="poppins"
+            align="left"
+            >
+                Proyectos donde participe
+            </Typography>
+            <div class="grid grid-cols-1 gap-4 mt-[2rem] md:grid-cols-2 lg:grid-cols-3">
+               {projects.map((item) =>(
+                  <CardProyectComponent data={item} client:load/>
+               ))}
+            </div>
+    </section>
+    <section class="p-8 md:justify-start md:flex-row">
+        <Typography 
+        type="h2"
+        color="primary"
+        size="extra-large"
+        weight="bold"
+        family="poppins"
+        align="left"
+        >
+            Proyectos prototipos (propios)
+        </Typography>
+    </section>
+    
+</Layout>

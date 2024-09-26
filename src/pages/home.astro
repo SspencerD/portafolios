@@ -5,6 +5,25 @@ import { skillsData,softSkillsData } from "@/data/skills";
 import SearchIcons from "@/utils/searchIcon";
 import searchNameTech from "@/utils/searchTech";
 ---
+<script>
+  const handleScroll = (section: string) => {
+        const id = section.toLowerCase().replace(" ", "-");  
+     
+        const element = document.getElementById(id);
+        if (element) {
+          return element.scrollIntoView({ behavior: "smooth" });
+        }
+      };
+      const button = document.getElementById('btn-projects');
+      button?.addEventListener('click',() =>{
+        handleScroll('projects');
+      });
+      const btnContactMe = document.getElementById('btn-contact-me');
+      btnContactMe?.addEventListener('click',() =>{
+        handleScroll('contact');
+      });
+</script>
+
 
 <section class="grid grid-cols-1 gap-4 p-6 md:grid-cols-2 md:grid-rows-2">
   <div class="flex flex-col justify-center">
@@ -30,22 +49,24 @@ import searchNameTech from "@/utils/searchTech";
     </div>
     <div class="flex items-center justify-start mb-[30px] w-full">
       <ButtonComponent
+       id="btn-projects"
         title="Explore projects"
-        onClick={() => {}}
+        onClick={() =>{}}
         shape="rounded"
         variant="primary"
         size="medium"
-      />
+       client:visible/>
     </div>
     <div>
       <div class="flex items-center justify-start my-[10px] w-full">
         <ButtonComponent
           title="CV"
+          id="btn-cv-document"
           onClick={() => {}}
           shape="rounded"
           variant="primary"
           size="small"
-        />
+          client:visible/>
       </div>
       <article class="text-wrap lg:mx-[1em] mt-[2rem]">
         <Typography
@@ -107,7 +128,9 @@ import searchNameTech from "@/utils/searchTech";
 
     </a>
   </div>
-  <button class="px-4 py-2 mt-4 text-white bg-green-500 rounded"
+  <button 
+  class="px-4 py-2 mt-4 text-white bg-green-500 rounded"
+  id="btn-contact-me"
     >Contact</button
   >
   </div>

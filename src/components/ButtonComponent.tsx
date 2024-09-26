@@ -1,8 +1,9 @@
 import React from "react";
 
 interface ButtonComponentProps {
+  id?: string;
   title: string;
-  onClick: () => void;
+  onClick: any;
   disabled?: boolean;
   className?: string;
   icon?: React.ReactNode;
@@ -25,13 +26,18 @@ const ButtonComponent = (props: ButtonComponentProps): React.ReactElement => {
     device = "desktop",
     loading = false,
     variant = "primary",
+    id,
   } = props;
 
   const variantButtons = {
-    primary: "bg-primary hover:bg-secondary text-white font-poppins-medium justify-start items-center",
-    secondary: "bg-secondary hover:bg-primary text-white font-poppins-medium justify-start items-center",
-    outlined: "border border-primary text-secondary hover:text-primary hover:border-secondary font-poppins-medium justify-start items-center",
-    dashed: "border-dashed border-2 text-secondary hover:text-lightColorIn border-lightColorOut hover:border-lightColorIn font-poppins-medium justify-start items-center",
+    primary:
+      "bg-primary hover:bg-secondary text-white font-poppins-medium justify-start items-center",
+    secondary:
+      "bg-secondary hover:bg-primary text-white font-poppins-medium justify-start items-center",
+    outlined:
+      "border border-primary text-secondary hover:text-primary hover:border-secondary font-poppins-medium justify-start items-center",
+    dashed:
+      "border-dashed border-2 text-secondary hover:text-lightColorIn border-lightColorOut hover:border-lightColorIn font-poppins-medium justify-start items-center",
   };
 
   const sizingButtons = {
@@ -66,12 +72,13 @@ const ButtonComponent = (props: ButtonComponentProps): React.ReactElement => {
 
   return (
     <button
+      id={id}
       className={buttonClasses}
       onClick={onClick}
       disabled={disabled}
     >
       {loading && (
-        <div className="spinner-border text-white mr-2" role="status">
+        <div className="mr-2 text-white spinner-border" role="status">
           <span className="sr-only">Loading...</span>
         </div>
       )}

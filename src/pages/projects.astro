@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react';
 import ButtonComponent from "@/components/ButtonComponent";
 import CardProyectComponent from "@/components/CardProyectComponent";
 import Typography from "@/components/TypographyComponent";
-import projects from "@/data/projects";
+import {projects} from "@/data/projects";
 
 ---
 <section class="p-8 mx-10 md:justify-start md:flex-row">
@@ -23,11 +23,8 @@ import projects from "@/data/projects";
     ))}
     </div>
     <div class=`flex justify-start mt-8 transition-opacity duration-1000 ${projects.length > 0 ? 'opacity-100': 'opacity-0'}`>
-        <ButtonComponent
-          title="Ver más proyectos"
-          size="large"
-          shape="rounded"
-          className="shadow-md"
-          onClick={() => window.location.href='/todos-los-proyectos'}
-        />
+      <a href="projects/all-projects" no-refferer target="_parent"
+       class="p-3 text-white rounded-md shadow-md shadow-tertiary bg-primary border-1 border-line hover:bg-secondary hover:text-gray-50 hover:border-primary">       
+    Ver otros proyectos
+    </a>
 </section>
