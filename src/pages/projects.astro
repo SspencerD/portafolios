@@ -1,0 +1,33 @@
+---
+import {useState,useEffect} from 'react';
+import ButtonComponent from "@/components/ButtonComponent";
+import CardProyectComponent from "@/components/CardProyectComponent";
+import Typography from "@/components/TypographyComponent";
+import projects from "@/data/projects";
+
+---
+<section class="p-8 mx-10 md:justify-start md:flex-row">
+    <Typography 
+    type="h2"
+    color="primary"
+    size="extra-large"
+    weight="bold"
+    family="poppins"
+    align="left"
+    >
+        Proyectos
+    </Typography>
+    <div class="grid grid-cols-1 gap-4 mt-[2rem] md:grid-cols-2 lg:grid-cols-3">
+    {projects?.slice(0,3).map((values) => (
+        <CardProyectComponent data={values} client:load/>
+    ))}
+    </div>
+    <div class=`flex justify-start mt-8 transition-opacity duration-1000 ${projects.length > 0 ? 'opacity-100': 'opacity-0'}`>
+        <ButtonComponent
+          title="Ver más proyectos"
+          size="large"
+          shape="rounded"
+          className="shadow-md"
+          onClick={() => window.location.href='/todos-los-proyectos'}
+        />
+</section>

@@ -1,0 +1,43 @@
+const projects =[
+    {
+        name:"Sabores card",
+        logo:'../../public/img/projects/logoSabores.avif',
+        image:'../../public/img/projects/sabores2.avif',
+        description:"Sabores Card es una plataforma digital que permite a las empresas vender y administrar comidas en línea, además de brindar a los clientes la oportunidad de comprar comidas en el momento que se necesiten.",
+        url:'https://www.saborescard.cl/',
+        stack:['react-Native', 'azureDevops', 'nodejs','react','css','javascript','graphql'],
+        longDescription:"Desde U-payments (Universal payments S.A) se creo está plataforma digital y tarjeta de prepago dedicado a la venta de productos comestibles...",
+        stackImages:['../../public/img/projects/sabores1.avif','../../public/img/projects/sabores3.avif'],
+    },
+    {
+        name:"Nueva POS Salcobrand",
+        logo:null,
+        image:'../../public/img/projects/salco.avif',
+        description:"Sabores Card es una plataforma digital que permite a las empresas vender y administrar comidas en línea, además de brindar a los clientes la oportunidad de comprar comidas en el momento que se necesiten.",
+        url:'https://www.saborescard.cl/',
+        stack:['react-Native', 'css', 'redux','typescript','kotlin'],
+        longDescription:"Desde U-payments (Universal payments S.A) se creo está plataforma digital y tarjeta de prepago dedicado a la venta de productos comestibles...",
+        stackImages:['../../public/img/projects/salco.avif'],
+    },
+    {
+        name:"Tarjeta Prepago de salud (AMOL)",
+        logo:null,
+        image:'../../public/img/projects/amol1.avif',
+        description:"Sabores Card es una plataforma digital que permite a las empresas vender y administrar comidas en línea, además de brindar a los clientes la oportunidad de comprar comidas en el momento que se necesiten.",
+        url:'https://www.saborescard.cl/',
+        stack:['react-Native', 'azureDevops', 'nodejs','react','css','javascript','graphql'],
+        longDescription:"Desde U-payments (Universal payments S.A) se creo está plataforma digital y tarjeta de prepago dedicado a la venta de productos comestibles...",
+        stackImages:['../../public/img/projects/amol2.avif','../../public/img/projects/amol3.avif'],
+    },
+    {
+        name:"SportPro (Deporte profesional onDemand)",
+        logo:null,
+        image:'../../public/img/projects/amol1.avif',
+        description:"Sabores Card es una plataforma digital que permite a las empresas vender y administrar comidas en línea, además de brindar a los clientes la oportunidad de comprar comidas en el momento que se necesiten.",
+        url:'https://www.saborescard.cl/',
+        stack:['react-Native', 'azureDevops', 'nodejs','react','css','javascript','graphql'],
+        longDescription:"Desde U-payments (Universal payments S.A) se creo está plataforma digital y tarjeta de prepago dedicado a la venta de productos comestibles...",
+        stackImages:['../../public/img/projects/amol2.avif','../../public/img/projects/amol3.avif'],
+    },
+];
+export default projects;

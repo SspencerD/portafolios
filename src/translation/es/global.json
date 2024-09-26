@@ -1,0 +1,112 @@
+{
+  "Header": {
+    "home": "Inicio",
+    "experence": "Experiencia",
+    "projects": "Proyectos",
+    "about-me": "Acerca de mí",
+    "skills": "Habilidades",
+    "buttons": {
+      "language": "Idioma",
+      "english": "English",
+      "spanish": "Español"
+    }
+  },
+  "Home": {
+    "name": "Santiago Spencer D.",
+    "subtitle": "Desarrollador web y mobile con conocimientos backend",
+    "buttons": {
+      "explore-projects": "Explorar proyectos",
+      "cv": "Curriculum Vitae",
+      "contact": "Contactame",
+      "github": "",
+      "linkedin": "",
+      "X": "",
+      "instagram": "",
+      "facebook": ""
+    },
+    "information": "Soy un desarrollador con una trayectoria solida  con mas de 4 años de experiencia in la industria de software, especializandome en Lenguajes como Javascript , Typescript y librerias como React y React-native. Mi Pasión por desarrollar codigo limpio y arquitectura escalable en la cual e colaborado sobre la inovación de proyectos y brindar soluciones que no solo cumplen , sino que superan los objetivos de mis clientes.",
+    "skills": "Habilidades",
+    "soft-skill": "Habilidades blandas",
+    "soft-skills-all": {
+      "teamwork": "Trabajo en equipo",
+      "problem-solving": "Resolución de problemas",
+      "communication": "Comunicación efectiva",
+      "adaptability": "Adaptable",
+      "innovation": "Innovación",
+      "leadership": "Liderazgo"
+    }
+  },
+  "Experience": {
+    "title": "Experiencia",
+    "subtitle": "Años de experiencia en la industria de software",
+    "items": [
+      {
+        "company": "SiiGroup Chile S.A",
+        "position": "Desarrollador fullStack",
+        "date": "Marzo 2023 - Actualidad",
+        "description": "Avances del mismo desarrollo del año 2022 pero con otra empresa aplicando nuevos conocimiento a la aplicación POS en React Native que mejoró el procesamiento de transacciones en un 20%, aumentando la eficiencia operativa. Implementé componentes personalizados que redujeron el tiempo de desarrollo en un 30%. Dejando que en las vistas tengan una logica simple e implementando custom hooks en cada vista donde se almacenaba la logica compleja."
+      },
+      {
+        "company": "Consultor freelance",
+        "position": "Desarrollador fullstack",
+        "date": "Febrero 2023 - Actualidad",
+        "description": "Estuve prestando apoyo a una empresa innovadora relacionada al deporte en mejorar su plataforma web en la cual estaba desarrollado en React en frontend y NestJs en backend , la Plataforma cuenta con sistema de suscripción en la cual la gente puede suscribirse a través de PayPal. Tambien se le implemento de forma innovadora una forma de imponer comerciales a sus videos dentro de la plataforma."
+      },
+      {
+        "company": "Clever IT Group SpA",
+        "position": "Desarrollador fullStack",
+        "date": "Octubre 2022 - Febrero 2023",
+        "description": "Apoyé en el desarrollo de una aplicación POS para una gran farmacéutica del país ,utilizando React Native y Redux, mejorando la experiencia del cliente y la eficiencia operativa. Desempeñé un papel clave en la estrategia y ejecución de soluciones móviles, aplicando conceptos de uso de hooks personalizados y componentes separados utilizando metodología DRY. También estuve apoyando un proyecto importante para una de las universidades mas importantes de Chile con tecnologías de vanguardia como GraphQL y NestJS. Aporté a la estabilidad del producto mediante la identificación proactiva y resolución de problemas complejos, optimizando el rendimiento de las aplicaciones existentes"
+      },
+      {
+        "company": "Universal payments S.A",
+        "position": "Lider de desarrollo Mobile",
+        "date": "Mayo 2020 - Octubre 2022",
+        "description": "Alcancé sistemáticamente objetivos estratégicos, contribuyendo a la dirección técnica y operativa del equipo. Facilité la adopción de mejores prácticas en desarrollo de software utilizando tecnologías como ReactJS Typescript y React Native y seguridades, incluyendo la ofuscación y la integración API-Rest con criptografía avanzada, fortaleciendo la seguridad y confiabilidad de las soluciones bancarias móviles. Guie y capacité a nuevos desarrolladores, fomentando un entorno de aprendizaje continuo."
+      }
+    ],
+    "button": "Ver todos mis proyectos"
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "subtitle": "Años de experiencia en la industria de software",
+    "items": [
+      {
+        "name": "Yakari Innovación",
+        "description": "Plataforma web y móvil para gestionar y administrar la innovación en el sector de la salud",
+        "technologies": "React, React-Native, Typescript, GraphQL, Apollo Server, AWS Amplify, AWS Cognito, AWS AppSync, AWS DynamoDB, AWS Lambda, AWS S3",
+        "link": "https://vivendoyakari.com"
+      },
+      {
+        "name": "Vivendo Yakari",
+        "description": "Plataforma web y móvil para gestionar y administrar la innovación en el sector de la salud",
+        "technologies": "React, React-Native, Typescript, GraphQL, Apollo Server, AWS Amplify, AWS Cognito, AWS AppSync, AWS DynamoDB, AWS Lambda, AWS S3",
+        "link": "https://vivendoyakari.com"
+      }
+    ]
+  },
+  "AboutMe": {
+    "title": "Acerca de mí",
+    "subtitle": "Un poco sobre mí y mis habilidades",
+    "description": "Soy un desarrollador web y mobile con conocimientos backend, especializandome en Lenguajes como Javascript, Typescript y librerias como React y React-native. Mi Pasión por desarrollar código limpio y arquitectura escalable"
+  },
+  "Contact-me":{
+    "title": "Contactame",
+    "subtitle": "Estoy aquí para ayudarte",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "message": "Mensaje",
+      "button": "Enviar"
+    },
+    "success": "El mensaje ha sido enviado correctamente",
+    "error": "Hubo un error al enviar el mensaje, intente nuevamente más tarde."
+  },
+  "footer":{
+    "copyright": "Todos los derechos reservados 2023",
+    "social-media": {
+      "github": "Github",
+      "linkedin": "Linkedin"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+---
+import ButtonComponent from "@/components/ButtonComponent";
+import TimeLineComponent from "@/components/Timeline";
+import Typography from "@/components/TypographyComponent";
+import { roadMap } from "@/data/skills";
+const events = roadMap;
+---
+
+<section class="flex flex-col items-center w-full p-8 bg-gray-20">
+  <Typography
+    type="h1"
+    color="primary"
+    size="extra-large"
+    weight="bold"
+    family="poppins"
+    align="left"
+  >
+    Experience / Roadmap
+  </Typography>
+  <div class="mt-[10rem] flex justify-center items-center w-full">
+    <TimeLineComponent events={events}  client:load/>
+  </div>
+  <div class="mt-8">
+    <Typography
+      type="p"
+      color="primary"
+      size="medium"
+      weight="bold"
+      family="poppins"
+      align="center"
+    >
+      Si quieres saber más de mi trayectoria puedes descargar mi CV.
+    </Typography>
+  </div>
+  <div class="flex justify-center mt-5">
+    <ButtonComponent
+      title="CV"
+      onClick={() => {}}
+      shape="rounded"
+      size="large"
+    />
+  </div>
+</section>

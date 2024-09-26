@@ -1,0 +1,25 @@
+---
+// Importar el layout principal
+import Layout from '../layouts/Layout.astro';
+import Experience from './experience.astro';
+import Home from './home.astro';
+import Projects from './projects.astro';
+---
+
+<Layout>
+  <section id="home" class="flex items-start justify-start min-h-screen mt-[36px]">
+    <Home/>
+  </section>
+  <section id="experience" class="flex items-center justify-center min-h-screen">
+   <Experience client:load/>
+  </section>
+  <section id="projects" class="flex items-center justify-center min-h-[54vh]">
+  <Projects client:load/>
+  </section>
+  <section id="about-me" class="flex items-center justify-center min-h-screen bg-gray-100">
+    <h1 class="text-4xl">About Me Section</h1>
+  </section>
+  <section id="skills" class="flex items-center justify-center min-h-screen">
+    <h1 class="text-4xl">Skills Section</h1>
+  </section>
+</Layout>

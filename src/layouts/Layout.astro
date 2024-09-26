@@ -1,0 +1,19 @@
+---
+import HeaderComponent from '@/components/HeaderComponent'
+import React from 'react'
+---
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Recneps TI | Tecnología e innovaciones</title>
+  </head>
+  <body>
+    <HeaderComponent client:load/>
+    <main>
+        <slot/>
+    </main>
+  </body>
+</html>

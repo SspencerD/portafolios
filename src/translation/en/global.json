@@ -1,0 +1,113 @@
+{
+    "Header": {
+      "home": "Home",
+      "experience": "Experience",
+      "projects": "Projects",
+      "about-me": "About Me",
+      "skills": "Skills",
+      "buttons": {
+        "language": "Language",
+        "english": "English",
+        "spanish": "Español"
+      }
+    },
+    "Home": {
+      "name": "Santiago Spencer D.",
+      "subtitle": "Web and mobile developer with backend knowledge",
+      "buttons": {
+        "explore-projects": "Explore Projects",
+        "cv": "Curriculum Vitae",
+        "contact": "Contact Me",
+        "github": "",
+        "linkedin": "",
+        "X": "",
+        "instagram": "",
+        "facebook": ""
+      },
+      "information": "I am a developer with a solid track record with over 4 years of experience in the software industry, specializing in languages like Javascript, Typescript, and libraries like React and React-native. My passion for developing clean code and scalable architecture has driven me to collaborate on the innovation of projects and provide solutions that not only meet but exceed my clients' objectives.",
+      "skills": "Skills",
+      "soft-skill": "Soft Skills",
+      "soft-skills-all": {
+        "teamwork": "Teamwork",
+        "problem-solving": "Problem-Solving",
+        "communication": "Effective Communication",
+        "adaptability": "Adaptability",
+        "innovation": "Innovation",
+        "leadership": "Leadership"
+      }
+    },
+    "Experience": {
+      "title": "Experience",
+      "subtitle": "Years of experience in the software industry",
+      "items": [
+        {
+          "company": "SiiGroup Chile S.A",
+          "position": "FullStack Developer",
+          "date": "March 2023 - Present",
+          "description": "Advances in the same development from 2022 but with another company, applying new knowledge to the POS application in React Native, which improved transaction processing by 20%, increasing operational efficiency. I implemented custom components that reduced development time by 30%, allowing for simple logic in views and implementing custom hooks in each view to store complex logic."
+        },
+        {
+          "company": "Freelance Consultant",
+          "position": "FullStack Developer",
+          "date": "February 2023 - Present",
+          "description": "I supported an innovative company related to sports in improving their web platform, which was developed in React for the frontend and NestJs for the backend. The platform has a subscription system where people can subscribe through PayPal. An innovative way of imposing commercials on their videos within the platform was also implemented."
+        },
+        {
+          "company": "Clever IT Group SpA",
+          "position": "FullStack Developer",
+          "date": "October 2022 - February 2023",
+          "description": "I supported the development of a POS application for a major pharmaceutical company in the country, using React Native and Redux, improving customer experience and operational efficiency. I played a key role in the strategy and execution of mobile solutions, applying concepts of custom hooks and separated components using DRY methodology. I also supported a major project for one of the most important universities in Chile with cutting-edge technologies like GraphQL and NestJS. I contributed to product stability by proactively identifying and solving complex problems, optimizing the performance of existing applications."
+        },
+        {
+          "company": "Universal Payments S.A",
+          "position": "Mobile Development Lead",
+          "date": "May 2020 - October 2022",
+          "description": "I consistently achieved strategic objectives, contributing to the technical and operational direction of the team. I facilitated the adoption of best practices in software development using technologies like ReactJS Typescript and React Native, and security practices including obfuscation and API-Rest integration with advanced cryptography, strengthening the security and reliability of mobile banking solutions. I guided and trained new developers, fostering a continuous learning environment."
+        }
+      ],
+      "button": "See All My Projects"
+    },
+    "Projects": {
+      "title": "Projects",
+      "subtitle": "Years of experience in the software industry",
+      "items": [
+        {
+          "name": "Yakari Innovation",
+          "description": "Web and mobile platform to manage and administer innovation in the health sector",
+          "technologies": "React, React-Native, Typescript, GraphQL, Apollo Server, AWS Amplify, AWS Cognito, AWS AppSync, AWS DynamoDB, AWS Lambda, AWS S3",
+          "link": "https://vivendoyakari.com"
+        },
+        {
+          "name": "Vivendo Yakari",
+          "description": "Web and mobile platform to manage and administer innovation in the health sector",
+          "technologies": "React, React-Native, Typescript, GraphQL, Apollo Server, AWS Amplify, AWS Cognito, AWS AppSync, AWS DynamoDB, AWS Lambda, AWS S3",
+          "link": "https://vivendoyakari.com"
+        }
+      ]
+    },
+    "AboutMe": {
+      "title": "About Me",
+      "subtitle": "A bit about me and my skills",
+      "description": "I am a web and mobile developer with backend knowledge, specializing in languages like Javascript, Typescript, and libraries like React and React-native. My passion for developing clean code and scalable architecture."
+    },
+    "Contact-me":{
+      "title": "Contact Me",
+      "subtitle": "I am here to help you",
+      "form": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "button": "Send"
+      },
+      "success": "The message has been sent successfully",
+      "error": "There was an error sending the message, please try again later."
+    },
+    "footer":{
+      "copyright": "All rights reserved 2023",
+      "social-media": {
+        "github": "Github",
+        "linkedin": "Linkedin"
+      }
+    }
+  }
+  

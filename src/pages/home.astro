@@ -1,0 +1,162 @@
+---
+import ButtonComponent from "@/components/ButtonComponent";
+import Typography from "@/components/TypographyComponent";
+import { skillsData,softSkillsData } from "@/data/skills";
+import SearchIcons from "@/utils/searchIcon";
+import searchNameTech from "@/utils/searchTech";
+---
+
+<section class="grid grid-cols-1 gap-4 p-6 md:grid-cols-2 md:grid-rows-2">
+  <div class="flex flex-col justify-center">
+    <Typography
+      type="h1"
+      color="primary"
+      size="extra-large"
+      weight="bold"
+      family="poppins"
+    >
+      Santiago Spencer D.
+    </Typography>
+    <div class="my-5">
+      <Typography
+        type="p"
+        color="primary"
+        size="medium"
+        weight="regular"
+        family="poppins"
+      >
+        Mobile and web developer with backend knowledge
+      </Typography>
+    </div>
+    <div class="flex items-center justify-start mb-[30px] w-full">
+      <ButtonComponent
+        title="Explore projects"
+        onClick={() => {}}
+        shape="rounded"
+        variant="primary"
+        size="medium"
+      />
+    </div>
+    <div>
+      <div class="flex items-center justify-start my-[10px] w-full">
+        <ButtonComponent
+          title="CV"
+          onClick={() => {}}
+          shape="rounded"
+          variant="primary"
+          size="small"
+        />
+      </div>
+      <article class="text-wrap lg:mx-[1em] mt-[2rem]">
+        <Typography
+          type="p"
+          color="black"
+          size="base"
+          weight="medium"
+          family="open"
+          align="justify"
+        >
+          I am a developer with a solid track record of more than 3 years in the
+          software industry, specializing in ReactJS and React-Native. My passion
+          for clean code and scalable software architecture has led me to
+          collaborate on innovative projects and provide solutions that not only
+          meet but exceed my clients objectives.
+        </Typography>
+      </article>
+    </div>
+  </div>
+  <div class="flex flex-col items-center ">
+    <div class="flex items-center mb-[2rem]">
+      <img
+        src="../../public/img/user1.avif"
+        alt="Santiago Spencer"
+        class="w-[25rem] h-[25rem] object-cover  justify-center rounded-full shadow-lg shadow-black"
+      />
+    </div>
+    <div class="flex justify-center w-full my-2 space-x-3">
+      <a href="#" no-refferer target={'_blank'} class="group relative flex items-center text-center justify-center w-[30px] h-[30px] bg-white hover:bg-slate-200 rounded-full shadow-sm shadow-black">
+        <SearchIcons name={'github'} size={25} />
+        <span class="absolute p-1 text-xs w-[100px] text-center transition-all scale-0 bg-black rounded font-poppins-regular text-slate-300 top-10 group-hover:scale-100">
+        Github
+        </span>
+        <a/>
+      <a href="#" no-refferer target={'_blank'} class="group relative flex items-center text-center justify-center w-[30px] h-[30px] bg-white hover:bg-slate-200 rounded-full shadow-sm shadow-black">
+        <SearchIcons name={'instagram'} size={25} />
+        <span class="absolute p-1 text-xs w-[100px] text-center transition-all scale-0 bg-black rounded font-poppins-regular text-slate-300 top-10 group-hover:scale-100">
+        Instagram
+        </span>
+        <a/>
+      <a href="#" no-refferer target={'_blank'} class="group relative flex items-center text-center justify-center w-[30px] h-[30px] bg-white hover:bg-slate-200 rounded-full shadow-sm shadow-black">
+        <SearchIcons name={'x'} size={25} />
+        <span class="absolute p-1 text-xs w-[100px] text-center transition-all scale-0 bg-black rounded font-poppins-regular text-slate-300 top-10 group-hover:scale-100">
+        X
+        </span>
+        <a/>
+      <a href="#" no-refferer target={'_blank'} class="group relative flex items-center text-center justify-center w-[30px] h-[30px] bg-white hover:bg-slate-200 rounded-full shadow-sm shadow-black">
+        <SearchIcons name={'linkedin'} size={25} />
+        <span class="absolute p-1 text-xs w-[100px] text-center transition-all scale-0 bg-black rounded font-poppins-regular text-slate-300 top-10 group-hover:scale-100">
+        Linkedin
+        </span>
+        <a/>
+      <a href="#" no-refferer target={'_blank'} class="group relative flex items-center text-center justify-center w-[30px] h-[30px] bg-white hover:bg-slate-200 rounded-full shadow-sm shadow-black">
+        <SearchIcons name={'discord'} size={25} />
+        <span class="absolute p-1 text-xs w-[100px] text-center transition-all scale-0 bg-black rounded font-poppins-regular text-slate-300 top-10 group-hover:scale-100">
+        Discord
+        </span>
+        <a/>
+
+    </a>
+  </div>
+  <button class="px-4 py-2 mt-4 text-white bg-green-500 rounded"
+    >Contact</button
+  >
+  </div>
+  <div class="flex flex-col justify-center">
+    <Typography
+      type="h2"
+      color="primary"
+      size="large"
+      weight="medium"
+      family="poppins"
+    >
+      Skills
+    </Typography>
+    <Typography
+      type="h3"
+      color="primary"
+      size="medium"
+      weight="medium"
+      family="poppins"
+    >
+      Technical skills
+    </Typography>
+    <div class="grid grid-cols-2 gap-6 px-[10%] py-4 md:grid-cols-5">
+      {
+        skillsData.map((item) => (
+          <div class="group relative flex items-center justify-center py-[10px] w-[50px] bg-white hover:bg-slate-200 rounded-lg shadow-md">
+            <SearchIcons name={item} size={25} />
+            <span class="absolute p-1 text-xs w-[100px] text-center transition-all scale-0 bg-black rounded font-poppins-regular text-slate-300 top-10 group-hover:scale-100">
+              {searchNameTech(item)}
+            </span>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+  <div
+    class="flex flex-col justify-start pt-[4.5em] pl-[30px] space-y-3"
+  >
+    <Typography
+      type="h3"
+      color="primary"
+      size="medium"
+      weight="medium"
+      family="poppins"
+    >
+      Soft skills
+    </Typography>
+    <ul class="grid items-center justify-between grid-cols-2 gap-2 p-4 m-3 md:grid-cols-2">
+    {softSkillsData.map((skills) => <li class="m-3 text-lg text-left text-black hover:text-line line-clamp-3 font-openSans-regular">● {skills}</li>)}
+    </ul>
+  </div>
+</section>

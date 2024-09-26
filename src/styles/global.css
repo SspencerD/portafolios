@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Open+Sans:wght@300;400;600;700&family=Comic+Neue:wght@300;400;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-link {
+  @apply text-gray-700 hover:text-green-500 transition-colors duration-300;
+}
+
+.nav-link.selected {
+  @apply text-green-500;
+}

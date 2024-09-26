@@ -1,0 +1,85 @@
+export const skillsData = [
+  "react",
+  "react-Native",
+  "tailwind",
+  "astro",
+  "nestjs",
+  "graphql",
+  "firebase",
+  "mongodb",
+  "css",
+  "html",
+  "javascript",
+  "typescript",
+  "nodejs",
+  "kotlin",
+  "azureDevops",
+  "gcp",
+  "redux",
+];
+
+export const softSkillsData =[
+  "Comunicativo",
+  "Trabajo en equipo",
+  "Autodidactico",
+  "Entusiasta",
+  "Analitico",
+  "Explorador",
+  "Creativo",
+  "Innovador",
+  "Orientado a la solucion",
+  "Responsable",
+];
+
+export const roadMap = [
+  {
+    title:"Formación academica",
+    description:"Ingeniería informatica ejecucción de sistemas",
+    place:'Instituto Profesional AIEP Santiago , Chile',
+    date: '03 de Marzo del 2013 hasta 18 de Octubre del 2018',
+    icon:'education',
+  },
+  {
+    title:"Desarrollador web y Administrador de sistemas",
+    description:"Orquesté la implementación de sistemas de etiquetado de productos avanzados (code128/PDF417), mejorando la trazabilidad y eficiencia en zona de envazado y bodegaje. Presté soporte vital en T.I , garantizando la continuidad operacional y la optimización de procesos administrativos.\n Desarrollé y mantuve una plataforma web desarrollado en PHP para clientes , mejorando la interfaz y lafuncionalidad en respuesta a las necesidades del negocio.",
+    place:'Industria Corchera S.A',
+    date: '13 de Septiembre del 2018 hasta 20 de Mayo del 2020',
+    icon:'laravel',
+  },
+  {
+    title:"Líder de desarrollo mobile",
+    description:"Alcanzaba sistemáticamente objetivos estratégicos, constribuyendo a la dirección técnica y operativa del equipo. Facilité la adopción de mejores prácticas en el desarrollo de software utilizando tecnologías como \bReactJS , \bTypescript y \bReact-native inclusive metodología en seguridad incluyendo ofuscación y la integración de \bApi-Rest con criptografia avanzada.",
+    place:'Universal Payments S.A',
+    date: '21 de Mayo del 2020 hasta 28 de Octubre del 2022',
+    icon:'upayments',
+  },
+  {
+    title:"Desarrollador FullStack",
+    description:"Apoyé en el desarrollo de una aplicación POS para una gran farmacéutica del país,utilizando React Native y Redux,mejorando la experiencia del cliente y la eficiencia operativa. Desempeñe un papel clave en la estrategia y ejecución de soluciones móviles,aplicando conceptos de uso de hooks personalizados y componentes separados utilizando metodologia \bDRY.",
+    place:'Clever IT Group S.A',
+    date:'30 de Octubre del 2022 hasta 23 de Febrero del 2023',
+    icon:'education',
+  },
+  {
+    title:"Desarrollador FullStack",
+    description:"Mejoré e implemente en un desafio de una plataforma de streaming anuncios personalizados y funcionalidades nuevas en la cual requerian mejoras significativas en la traducción  ,funcionamiento de suscripción , función de crear 'Clips' y valoración dentro de la plataforma.\n Hoy por hoy sigo haciendo trabajos para está plataforma de forma exporadica",
+    place:'Sportpro TV',
+    date: '01 de Marzo del 2023 hasta actualidad',
+    icon:'sportpro',
+  },
+  {
+    title:"Desarrollador Mobile",
+    description:"Avances del mismo desarollo que estuve con la empresa CleverIT pero con la empresa SII Group , aplicando nuevos conocimientos a la aplicación POS en React Native que mejoró el procesamiento de transacciones en un 20%,aumentando la eficiencia operativa. Implementé componentes personalizados que redujeron el tiempo de desarrollo en un 30%.\n Dejando que en las vistas tengan una logica simple e implementando Hooks personalizados en cada vista donde se almacenaba la logica compleja.",
+    place:'Salcobrand S.A',
+    date: '01 de Abril del 2023 hasta 15 de Febrero del 2024',
+    icon:'siigroup',
+  },
+  {
+    title:"Desarrollador Frontend",
+    description:"Apoyando y trabajando en desarrollo microFrontend que dispone la empresa , apoyando en el desarrollo de componentes y servicio que requiere la empresa bancaria , apoyando con mis conocimiento en desarrollo de proyectos tanto en react-legacy como ya proyectos mas sofisticados con  \bTypescript y \bReactTS",
+    place:'Scotiabank Chile S.A',
+    date: '01 de Abril del 2023 hasta actualidad',
+    icon:'scotiabank',
+  },
+
+]
