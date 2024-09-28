@@ -1,26 +1,76 @@
 ---
+import ImageSliderComponent from "@/components/SlidesImagesComponent";
+import StackComponent from "@/components/StackComponent";
 import Typography from "@/components/TypographyComponent";
-import {projects} from "@/data/projects";
+import { projects } from "@/data/projects";
 import Layout from "@/layouts/Layout.astro";
 
 export function getStaticPaths() {
-    return projects.map((proy) => ({
-        params: { project: proy.slug },
-    }));
+  return projects.map((proy) => ({
+    params: { project: proy.slug },
+  }));
 }
-const {project} = Astro.params;
+const { project } = Astro.params;
 const currentProject = projects.find((p) => p.slug === project);
+const stackImages = currentProject ? currentProject.stackImages : [];
 ---
+
 <Layout>
-    <section class="p-8 mx-10 md:justify-start md:flex-row">
-        <Typography 
-        type="h2"
-        color="primary"
-        size="extra-large"
-        weight="bold"
-        family="poppins"
-        align="left"
-        >
-      {currentProject?.name}
-        </Typography>
-</Layout>
+    <section class="grid min-h-screen grid-cols-5 grid-rows-5 gap-2 p-4">
+        <div class="self-center col-start-1 col-end-8">
+            
+                <Typography
+                type="h2"
+                color="primary"
+                size="extra-large"
+                weight="bold"
+                family="poppins"
+                align="left"
+              >
+                {currentProject?.name}
+              </Typography>
+           
+        </div>
+        <div class="col-start-1 col-end-3 row-span-5 row-start-2">
+            <ImageSliderComponent images={stackImages} intervalTime={5000} transitionTime={1000}  client:load />
+        </div>
+        <div class="col-span-3 col-start-3 row-span-2 row-start-2 mx-[2rem]">
+            <div class="my-[3rem]">
+                <img src={currentProject?.logo} class="object-contain  max-w-[200px] max-h-[250px]" alt={currentProject?.name} />
+            </div>
+            <Typography
+            type="p"
+            color="black"
+            size="medium"
+            weight="regular"
+            family="comicNeue"
+            align="left"
+          >
+            {currentProject?.longDescription}
+          </Typography>
+        </div>
+        <div class="col-span-5 col-start-3 row-start-5 row-end-6 mt-[2rem] self-end">
+            <div>
+                <Typography
+                type="p"
+                color="secondary"
+                size="medium"
+                weight="regular"
+                family="poppins"
+                align="left"
+              >
+                Tecnologias utilizadas
+              </Typography>
+            </div>
+            <div class="flex flex-row items-center justify-start p-4 space-x-7">
+            {currentProject?.stack.map((item) =>(
+                
+                <div class="mt-2">
+                    <StackComponent name={item} client:load/>
+            </div>
+                ))}
+            </div>
+        </div>
+    </section>
+  </Layout
+>

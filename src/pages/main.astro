@@ -1,8 +1,10 @@
 ---
 // Importar el layout principal
 import Layout from '../layouts/Layout.astro';
+import ContactMe from './contact-me.astro';
 import Experience from './experience.astro';
 import Home from './home.astro';
+import MyGuarantee from './my-guarantee.astro';
 import Projects from './projects.astro';
 ---
 
@@ -11,15 +13,15 @@ import Projects from './projects.astro';
     <Home/>
   </section>
   <section id="experience" class="flex items-center justify-center min-h-screen">
-   <Experience client:load/>
+   <Experience/>
   </section>
   <section id="projects" class="flex items-center justify-center min-h-[54vh]">
-  <Projects client:load/>
+  <Projects />
   </section>
-  <section id="about-me" class="flex items-center justify-center min-h-screen bg-gray-100">
-    <h1 class="text-4xl">About Me Section</h1>
+  <section id="about-me" class="flex items-center justify-center min-h-[54vh]">
+    <MyGuarantee />
   </section>
   <section id="contact" class="flex items-center justify-center min-h-screen">
-    <h1 class="text-4xl">Contact Section</h1>
+   <ContactMe />
   </section>
 </Layout>

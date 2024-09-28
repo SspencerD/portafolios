@@ -1,47 +1,46 @@
 import { motion } from "framer-motion";
 import Typography from "./TypographyComponent";
 import ButtonComponent from "./ButtonComponent";
-import SearchIcons from "@/utils/searchIcon";
-import searchNameTech from "@/utils/searchTech";
+import StackComponent from "./StackComponent";
 
 interface CardsProps {
-  data:{
-    name:string;
-    slug?:string;
+  data: {
+    name: string;
+    slug?: string | null;
     description: string;
-    image:string;
-    logo?:string | null;
-    longDescription?:string;
-    stack:string[];
-    url?:string;
-    stackImages?:string[];
-  }
+    image: string;
+    logo?: string | null;
+    longDescription?: string | null;
+    stack: string[];
+    url?: string | null;
+    stackImages?: string[] | null;
+  };
 }
 
-const CardProyectComponent = (props:CardsProps) => {
+const CardProyectComponent = (props: CardsProps) => {
   const {
     name,
     slug,
     description,
     image,
-    logo,
     url,
-    longDescription,
     stack,
-    stackImages,
   } = props.data;
   return (
     <motion.div
-  initial={{ opacity: 0, x: "-100vw" }}
-  animate={{ opacity: 1, x: 0 }}
-  transition={{ type: "spring", stiffness: 100, delay: 0.2 ,damping:10 }}
-  whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0,0,0,0.2)" }}
-  className="p-4 bg-gray-100 rounded-lg shadow-lg min-h-[30rem] flex flex-col justify-between"
->
+      initial={{ opacity: 0, x: "-100vw" }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ type: "spring", stiffness: 100, delay: 0.2, damping: 10 }}
+      whileHover={{ scale: 1.05, boxShadow: "0px 5px 15px rgba(0,0,0,0.2)" }}
+      className="p-4 bg-gray-100 rounded-lg shadow-lg min-h-[30rem] flex flex-col justify-between"
+    >
       <div className="flex items-center justify-center">
-        <a href={url} no-refferer="true" target="_blank">
-        <img src={image} alt={name} 
-        className="max-w-[20rem] max-h-[15rem] object-contain"/>
+        <a href={url ? url : "#"} no-refferer="true" target="_blank">
+          <img
+            src={image}
+            alt={name}
+            className="max-w-[20rem] max-h-[15rem] object-contain"
+          />
         </a>
       </div>
       <div>
@@ -53,7 +52,7 @@ const CardProyectComponent = (props:CardsProps) => {
           weight="medium"
           family="poppins"
         >
-         {name}
+          {name}
         </Typography>
         <Typography
           type="p"
@@ -66,19 +65,26 @@ const CardProyectComponent = (props:CardsProps) => {
           {description}
         </Typography>
       </div>
-      <div className="flex flex-row items-center justify-between mt-4 ">
+      <div className={`flex flex-row items-center  ${slug === null ?'justify-start':'justify-between'} mt-4`}>
+        {slug !== null &&(
         <ButtonComponent
           title="Ver"
           size="small"
           shape="rounded"
           onClick={() => {
-            window.location.href= `${slug}`;
+            const location = window.location.pathname;
+            if (location.includes("projects")) {
+              window.location.href = `${slug}`;
+            } else {
+              window.location.href = `projects/${slug}`;
+            }
           }}
         />
+        )}
         <div>
           <Typography
             type="p"
-            align="right"
+            align={slug === null ?'left':'right'}
             color="primary"
             size="small"
             weight="medium"
@@ -88,24 +94,7 @@ const CardProyectComponent = (props:CardsProps) => {
           </Typography>
           <div className="flex flex-wrap space-x-1 item-center">
             {stack.map((element) => (
-            <motion.div
-            key={Math.random() + '-' +name}
-              whileHover={{ scale: 1.2 }}
-              transition={{ type: "spring", stiffness: 300 }}
-              className="p-2 rounded-md shadow-sm bg-slate-100"
-            >
-              <a
-                href={'#'}
-                no-refferer={"false"}
-                target={"_blank"}
-                className="relative flex items-center justify-center text-center group"
-              >
-                <SearchIcons name={element} size={15} />
-                <span className="absolute w-auto p-1 text-xs text-center transition-all scale-0 bg-black rounded font-poppins-regular text-slate-300 top-8 group-hover:scale-100">
-                {searchNameTech(element)}
-                </span>
-              </a>
-            </motion.div>
+              <StackComponent name={element} />
             ))}
           </div>
         </div>

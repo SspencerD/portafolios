@@ -1,7 +1,7 @@
 ---
 import Typography from "@/components/TypographyComponent";
 import Layout from "../../layouts/Layout.astro"
-import {projects} from "@/data/projects";
+import {ownerProjects, projects} from "@/data/projects";
 import CardProyectComponent from "@/components/CardProyectComponent";
 ---
 
@@ -25,7 +25,7 @@ import CardProyectComponent from "@/components/CardProyectComponent";
                ))}
             </div>
     </section>
-    <section class="p-8 md:justify-start md:flex-row">
+    <section class="p-8 mt-8 md:justify-start md:flex-row">
         <Typography 
         type="h2"
         color="primary"
@@ -36,6 +36,11 @@ import CardProyectComponent from "@/components/CardProyectComponent";
         >
             Proyectos prototipos (propios)
         </Typography>
+        <div class="grid grid-cols-1 gap-4 mt-[2rem] md:grid-cols-2 lg:grid-cols-3">
+            {ownerProjects.map((item) =>(
+               <CardProyectComponent data={item} client:load/>
+            ))}
+         </div>
     </section>
     
 </Layout>
