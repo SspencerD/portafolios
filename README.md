@@ -15,7 +15,7 @@ npx playwright install chromium
 npm run test:e2e
 ```
 
-Astro 7.4.5, React 19.3.1 y Tailwind CSS 4.3.4 mediante el plugin oficial de Vite. Se conserva React para componentes compatibles; el timeline se renderiza en servidor sin JavaScript de cliente ni hooks. Se eliminaron librerías de animación y timeline que ya no se usan. npm es el gestor único; `package-lock.json` fija el árbol reproducible.
+Astro 7.4.5, React 19.3.1 y Tailwind CSS 4.3.4 mediante el plugin oficial de Vite. Se conserva React para componentes compatibles; el timeline se renderiza en servidor sin hidratación de React ni hooks. Un pequeño script con IntersectionObserver anima cada entrada una sola vez al entrar en pantalla; respeta movimiento reducido y el contenido sigue visible sin JavaScript. Se eliminaron librerías de animación y timeline que ya no se usan. npm es el gestor único; `package-lock.json` fija el árbol reproducible.
 
 ## Idiomas
 
@@ -44,6 +44,6 @@ Pendiente de información verificable: CV descargable, correo/LinkedIn y otros c
 
 - `npm run build`: diagnóstico de Astro y generación estática.
 - `npm test`: paridad de traducciones, datos laborales confirmados y assets.
-- `npm run test:e2e`: español/inglés a 320, 390, 768 y 1440 px; ancho sin desbordamiento, timeline sin superposición, imágenes, cambio de idioma y recarga, funcionamiento sin JavaScript.
+- `npm run test:e2e`: español/inglés a 320, 390, 768 y 1440 px; ancho sin desbordamiento, timeline sin superposición, imágenes, cambio de idioma y recarga, funcionamiento sin JavaScript, animación al hacer scroll y preferencia de movimiento reducido.
 
 Revisar despliegue con Node >=22.23.4 antes de publicar. No se modifica ninguna configuración externa ni se despliega automáticamente.

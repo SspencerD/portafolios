@@ -42,6 +42,7 @@ const ids = ['home', 'experience', 'projects', 'about-me', 'skills'];
   <footer>{t.footer}</footer>
 </Layout>
 <script>
+  import "../scripts/timeline";
   document.querySelector<HTMLAnchorElement>('[data-language-switch]')?.addEventListener('click', function () {
     this.hash = window.location.hash;
   });
