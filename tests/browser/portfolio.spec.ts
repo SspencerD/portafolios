@@ -20,8 +20,8 @@ for (const width of [320, 390, 768, 1440]) {
         if(i) expect(boxes[i].y).toBeGreaterThanOrEqual(boxes[i-1].bottom);
       }
       const images = await page.locator('img').evaluateAll(async imgs => {
-        await Promise.all(imgs.map(img => { img.loading='eager'; return img.decode().catch(()=>{}); }));
-        return imgs.every(img=>img.naturalWidth>0);
+        await Promise.all(imgs.map(img => { if (img instanceof HTMLImageElement) { img.loading='eager'; return img.decode().catch(()=>{}); } }));
+        return imgs.every(img=>img instanceof HTMLImageElement && img.naturalWidth>0);
       });
       expect(images).toBe(true);
       expect(await page.locator('a[href="#"]').count()).toBe(0);
