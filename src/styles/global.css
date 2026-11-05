@@ -57,3 +57,18 @@ footer { text-align: center; padding: 2rem 1rem; border-top: 1px solid #d9e6d7; 
   .project-grid { grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Animate only after a row enters the viewport; never hide unread content. */
+@media (prefers-reduced-motion: no-preference) {
+  .timeline-revealed .timeline-card { animation: timeline-enter 650ms cubic-bezier(.2,.7,.2,1) both; }
+  .timeline-revealed::after { animation: timeline-marker 800ms ease-out both; }
+}
+@keyframes timeline-enter {
+  from { opacity: .25; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes timeline-marker {
+  0% { transform: scale(.65); box-shadow: 0 0 0 0 #368b2e50; }
+  45% { transform: scale(1.15); box-shadow: 0 0 0 8px #368b2e15; }
+  100% { transform: scale(1); box-shadow: 0 0 0 12px #368b2e00; }
+}
