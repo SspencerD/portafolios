@@ -1,112 +1,79 @@
 {
-  "Header": {
-    "home": "Inicio",
-    "experence": "Experiencia",
-    "projects": "Proyectos",
-    "about-me": "Acerca de mí",
-    "skills": "Habilidades",
-    "buttons": {
-      "language": "Idioma",
-      "english": "English",
-      "spanish": "Español"
-    }
-  },
-  "Home": {
-    "name": "Santiago Spencer D.",
-    "subtitle": "Desarrollador web y mobile con conocimientos backend",
-    "buttons": {
-      "explore-projects": "Explorar proyectos",
-      "cv": "Curriculum Vitae",
-      "contact": "Contactame",
-      "github": "",
-      "linkedin": "",
-      "X": "",
-      "instagram": "",
-      "facebook": ""
+  "nav": [
+    "Inicio",
+    "Experiencia",
+    "Proyectos",
+    "Sobre mí",
+    "Tecnologías"
+  ],
+  "title": "Desarrollador web y mobile",
+  "intro": "Santiago Spencer D.",
+  "lead": "Desarrollo aplicaciones con React, React Native y TypeScript, con experiencia en frontend, backend y soluciones móviles.",
+  "explore": "Explorar proyectos",
+  "about": "Sobre mí",
+  "bio": "Mi trayectoria combina desarrollo web y mobile, integración de servicios y trabajo en equipo. He colaborado en soluciones de pagos, retail, banca y streaming. Actualmente trabajo en Mantu y continúo colaborando con SportPro TV.",
+  "skills": "Tecnologías",
+  "experience": "Experiencia y formación",
+  "projects": "Proyectos",
+  "description": "Portafolio de Santiago Spencer: desarrollo web y mobile, experiencia y proyectos.",
+  "github": "Ver perfil de GitHub",
+  "visit": "Visitar sitio",
+  "footer": "Santiago Spencer D. · Recneps T.I.",
+  "projectNote": "Selección de proyectos del portafolio original.",
+  "events": [
+    {
+      "date": "Marzo 2013 – octubre 2018",
+      "title": "Formación académica",
+      "description": "Ingeniería en Informática, ejecución de sistemas.",
+      "place": "Instituto Profesional AIEP · Santiago, Chile"
     },
-    "information": "Soy un desarrollador con una trayectoria solida  con mas de 4 años de experiencia in la industria de software, especializandome en Lenguajes como Javascript , Typescript y librerias como React y React-native. Mi Pasión por desarrollar codigo limpio y arquitectura escalable en la cual e colaborado sobre la inovación de proyectos y brindar soluciones que no solo cumplen , sino que superan los objetivos de mis clientes.",
-    "skills": "Habilidades",
-    "soft-skill": "Habilidades blandas",
-    "soft-skills-all": {
-      "teamwork": "Trabajo en equipo",
-      "problem-solving": "Resolución de problemas",
-      "communication": "Comunicación efectiva",
-      "adaptability": "Adaptable",
-      "innovation": "Innovación",
-      "leadership": "Liderazgo"
-    }
-  },
-  "Experience": {
-    "title": "Experiencia",
-    "subtitle": "Años de experiencia en la industria de software",
-    "items": [
-      {
-        "company": "SiiGroup Chile S.A",
-        "position": "Desarrollador fullStack",
-        "date": "Marzo 2023 - Actualidad",
-        "description": "Avances del mismo desarrollo del año 2022 pero con otra empresa aplicando nuevos conocimiento a la aplicación POS en React Native que mejoró el procesamiento de transacciones en un 20%, aumentando la eficiencia operativa. Implementé componentes personalizados que redujeron el tiempo de desarrollo en un 30%. Dejando que en las vistas tengan una logica simple e implementando custom hooks en cada vista donde se almacenaba la logica compleja."
-      },
-      {
-        "company": "Consultor freelance",
-        "position": "Desarrollador fullstack",
-        "date": "Febrero 2023 - Actualidad",
-        "description": "Estuve prestando apoyo a una empresa innovadora relacionada al deporte en mejorar su plataforma web en la cual estaba desarrollado en React en frontend y NestJs en backend , la Plataforma cuenta con sistema de suscripción en la cual la gente puede suscribirse a través de PayPal. Tambien se le implemento de forma innovadora una forma de imponer comerciales a sus videos dentro de la plataforma."
-      },
-      {
-        "company": "Clever IT Group SpA",
-        "position": "Desarrollador fullStack",
-        "date": "Octubre 2022 - Febrero 2023",
-        "description": "Apoyé en el desarrollo de una aplicación POS para una gran farmacéutica del país ,utilizando React Native y Redux, mejorando la experiencia del cliente y la eficiencia operativa. Desempeñé un papel clave en la estrategia y ejecución de soluciones móviles, aplicando conceptos de uso de hooks personalizados y componentes separados utilizando metodología DRY. También estuve apoyando un proyecto importante para una de las universidades mas importantes de Chile con tecnologías de vanguardia como GraphQL y NestJS. Aporté a la estabilidad del producto mediante la identificación proactiva y resolución de problemas complejos, optimizando el rendimiento de las aplicaciones existentes"
-      },
-      {
-        "company": "Universal payments S.A",
-        "position": "Lider de desarrollo Mobile",
-        "date": "Mayo 2020 - Octubre 2022",
-        "description": "Alcancé sistemáticamente objetivos estratégicos, contribuyendo a la dirección técnica y operativa del equipo. Facilité la adopción de mejores prácticas en desarrollo de software utilizando tecnologías como ReactJS Typescript y React Native y seguridades, incluyendo la ofuscación y la integración API-Rest con criptografía avanzada, fortaleciendo la seguridad y confiabilidad de las soluciones bancarias móviles. Guie y capacité a nuevos desarrolladores, fomentando un entorno de aprendizaje continuo."
-      }
-    ],
-    "button": "Ver todos mis proyectos"
-  },
-  "Projects": {
-    "title": "Proyectos",
-    "subtitle": "Años de experiencia en la industria de software",
-    "items": [
-      {
-        "name": "Yakari Innovación",
-        "description": "Plataforma web y móvil para gestionar y administrar la innovación en el sector de la salud",
-        "technologies": "React, React-Native, Typescript, GraphQL, Apollo Server, AWS Amplify, AWS Cognito, AWS AppSync, AWS DynamoDB, AWS Lambda, AWS S3",
-        "link": "https://vivendoyakari.com"
-      },
-      {
-        "name": "Vivendo Yakari",
-        "description": "Plataforma web y móvil para gestionar y administrar la innovación en el sector de la salud",
-        "technologies": "React, React-Native, Typescript, GraphQL, Apollo Server, AWS Amplify, AWS Cognito, AWS AppSync, AWS DynamoDB, AWS Lambda, AWS S3",
-        "link": "https://vivendoyakari.com"
-      }
-    ]
-  },
-  "AboutMe": {
-    "title": "Acerca de mí",
-    "subtitle": "Un poco sobre mí y mis habilidades",
-    "description": "Soy un desarrollador web y mobile con conocimientos backend, especializandome en Lenguajes como Javascript, Typescript y librerias como React y React-native. Mi Pasión por desarrollar código limpio y arquitectura escalable"
-  },
-  "Contact-me":{
-    "title": "Contactame",
-    "subtitle": "Estoy aquí para ayudarte",
-    "form": {
-      "name": "Nombre",
-      "email": "Correo electrónico",
-      "message": "Mensaje",
-      "button": "Enviar"
+    {
+      "date": "Septiembre 2018 – mayo 2020",
+      "title": "Desarrollador web y administrador de sistemas",
+      "description": "Desarrollo y mantenimiento de una plataforma PHP para clientes, sistemas de etiquetado y soporte de TI.",
+      "place": "Industria Corchera S.A."
     },
-    "success": "El mensaje ha sido enviado correctamente",
-    "error": "Hubo un error al enviar el mensaje, intente nuevamente más tarde."
-  },
-  "footer":{
-    "copyright": "Todos los derechos reservados 2023",
-    "social-media": {
-      "github": "Github",
-      "linkedin": "Linkedin"
+    {
+      "date": "Mayo 2020 – octubre 2022",
+      "title": "Líder de desarrollo mobile",
+      "description": "Desarrollo con React, TypeScript y React Native, adopción de prácticas de seguridad e integración de API REST.",
+      "place": "Universal Payments S.A."
+    },
+    {
+      "date": "Octubre 2022 – febrero 2023",
+      "title": "Desarrollador FullStack",
+      "description": "Desarrollo de una aplicación POS con React Native y Redux, hooks personalizados y componentes reutilizables.",
+      "place": "Clever IT Group S.A."
+    },
+    {
+      "date": "Marzo 2023 – actualidad",
+      "title": "Desarrollador FullStack",
+      "description": "Colaboración en una plataforma de streaming: traducciones, suscripciones, clips y valoraciones. Continúo colaborando de forma esporádica.",
+      "place": "SportPro TV"
+    },
+    {
+      "date": "Abril 2023 – febrero 2024",
+      "title": "Desarrollador mobile",
+      "description": "Desarrollo de una aplicación POS en React Native con componentes y hooks personalizados.",
+      "place": "Salcobrand S.A. · SII Group"
+    },
+    {
+      "date": "Abril 2023 – marzo 2026",
+      "title": "Desarrollador frontend",
+      "description": "Desarrollo de microfrontends, componentes y servicios con React y TypeScript para el sector bancario.",
+      "place": "Scotiabank Chile · SII Group"
+    },
+    {
+      "date": "Abril 2026 – actualidad",
+      "title": "Desarrollador FullStack",
+      "description": "Actualmente enfocado en desarrollo mobile con React Native.",
+      "place": "Mantu"
     }
-  }
+  ],
+  "projectDescriptions": [
+    "Plataforma digital para venta y administración de comidas y tarjeta de prepago.",
+    "Aplicación de punto de venta para Salcobrand.",
+    "Tarjeta de prepago de salud AMOL.",
+    "Plataforma de streaming deportivo bajo demanda."
+  ]
 }

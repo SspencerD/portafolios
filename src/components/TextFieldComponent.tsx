@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { LiaEye, LiaEyeSlash } from "react-icons/lia";
+import React from "react";
+
 
 interface TextFieldComponentProps {
   label: string;
@@ -31,7 +31,7 @@ const TextFieldComponent = (
     error,
     helperText,
   } = props;
-  const [showPassword, setShowPassword] = useState<boolean>(false);
+
   const variantTextField = {
     default: "font-poppins-semibold text-[10px] text-left text-black",
     outlined:
@@ -46,12 +46,10 @@ const TextFieldComponent = (
     }`,
   };
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
+
 
   return (
-    <div className={`${variantTextField[variant]}`}>
+    <div className={`${variantTextField[variant]} ${className ?? ""}`}>
       <p
         className={`${
           error ? "text-red-500" : "text-secondary"
@@ -60,6 +58,7 @@ const TextFieldComponent = (
         {label}
       </p>
       <input
+        disabled={disabled}
         className={`${shapeTextField[shape]} flex justify-start items-start py-2 pl-2 font-poppins-regular font-[12px]`}
         type={type}
         value={value}

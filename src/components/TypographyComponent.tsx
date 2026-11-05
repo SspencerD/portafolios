@@ -26,7 +26,7 @@ const {
    ...rest
 } = props;
 
-const Component = type as keyof JSX.IntrinsicElements;
+const Component = type as keyof React.JSX.IntrinsicElements;
 
 const className = `
 ${align === 'center' ? 'text-center': ''}

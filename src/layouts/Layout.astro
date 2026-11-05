@@ -1,19 +1,22 @@
 ---
-import HeaderComponent from '@/components/HeaderComponent'
-import React from 'react'
+import '../styles/global.css';
+import { messages, type Locale } from '../i18n/content';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = messages[locale];
 ---
-<html lang="es">
+<!doctype html>
+<html lang={locale}>
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={t.description} />
     <meta name="generator" content={Astro.generator} />
-    <title>Recneps TI | Tecnología e innovaciones</title>
+    <title>{t.intro} | {t.title}</title>
+    <link rel="alternate" hreflang="es" href="/" />
+    <link rel="alternate" hreflang="en" href="/en/" />
+    <link rel="alternate" hreflang="x-default" href="/" />
   </head>
-  <body>
-    <HeaderComponent client:load/>
-    <main>
-        <slot/>
-    </main>
-  </body>
+  <body><a class="skip-link" href="#main">{locale === 'es' ? 'Saltar al contenido' : 'Skip to content'}</a><slot /></body>
 </html>
