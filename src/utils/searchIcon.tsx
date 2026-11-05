@@ -1,6 +1,8 @@
 import React from "react";
 import {
   TbBrandGithub,
+  TbBrandAzure,
+  TbMasksTheater,
   TbBrandInstagram,
   TbBrandLinkedin,
   TbBrandDiscordFilled,
@@ -12,7 +14,6 @@ import {
   TbSunFilled,
 } from "react-icons/tb";
 import {
-  SiAzuredevops,
   SiExpress,
   SiFirebase,
   SiFlutter,
@@ -28,11 +29,10 @@ import {
   SiRedux,
   SiNodedotjs,
   SiTailwindcss,
-  SiCss3,
+  SiCss,
   SiHtml5,
   SiAstro,
   SiJest,
-  SiPlaywright,
   SiMongodb,
   SiGooglecloud,
 } from "react-icons/si";
@@ -54,7 +54,7 @@ const SearchIcons:React.FC<SearchIconsProps> = ({name,color,size}) => {
     ["brightness-up", <TbBrightnessUp size={size} color={color} />],
     ["moon", <TbMoonFilled size={size} color={color} />],
     ["sun", <TbSunFilled size={size} color={color} />],
-    ["azureDevops", <SiAzuredevops size={size} color={'#035BDA'} />],
+    ["azureDevops", <TbBrandAzure size={size} color={'#035BDA'} />],
     ["express", <SiExpress size={size} color={color} />],
     ["firebase", <SiFirebase size={size} color={'#FF6F00'} />],
     ["flutter", <SiFlutter size={size} color={'#40C4FF'} />],
@@ -71,11 +71,11 @@ const SearchIcons:React.FC<SearchIconsProps> = ({name,color,size}) => {
     ["redux", <SiRedux size={size} color={'#7E57C2'} />],
     ["nodejs", <SiNodedotjs size={size} color={'#21A366'} />],
     ["tailwind", <SiTailwindcss size={size} color={'#00ACC1'} />],
-    ["css", <SiCss3 size={size} color={'#0277BD'} />],
+    ["css", <SiCss size={size} color={'#0277BD'} />],
     ["html", <SiHtml5 size={size} color={'#E65100'} />],
     ["astro", <SiAstro size={size} color={'#C822FF'} />],
     ["jest", <SiJest size={size} color={'#99415B'} />],
-    ["playwright", <SiPlaywright size={size} color={'#32BEA6'} />],
+    ["playwright", <TbMasksTheater size={size} color={'#32BEA6'} />],
     ["mongodb", <SiMongodb size={size} color={'#689F38'} />],
     ["gcp", <SiGooglecloud size={size} color={'#1976D2'} />],
   ]);

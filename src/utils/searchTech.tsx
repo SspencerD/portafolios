@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const searchNameTech = (name: string) => {
   const techName = new Map([

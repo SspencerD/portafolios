@@ -1,0 +1,48 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import Layout from '../layouts/Layout.astro';
+import Timeline from './Timeline';
+import { messages, type Locale } from '../i18n/content';
+import { profile } from '../data/profile';
+import projects from '../data/projects';
+interface Props { locale: Locale }
+const { locale } = Astro.props;
+const t = messages[locale];
+const otherLocale = locale === 'es' ? 'en' : 'es';
+const ids = ['home', 'experience', 'projects', 'about-me', 'skills'];
+---
+<Layout locale={locale}>
+  <header class="site-header">
+    <a class="brand" href={getRelativeLocaleUrl(locale)}>/&gt; Recneps T.I.</a>
+    <nav aria-label={locale === 'es' ? 'Navegación principal' : 'Main navigation'}>
+      {ids.map((id, i) => <a href={`#${id}`}>{t.nav[i]}</a>)}
+    </nav>
+    <a class="language" data-language-switch href={getRelativeLocaleUrl(otherLocale)} lang={otherLocale} hreflang={otherLocale} aria-label={locale === 'es' ? 'Switch to English' : 'Cambiar a español'}>{otherLocale === 'en' ? 'English' : 'Español'}</a>
+  </header>
+  <main id="main">
+    <section id="home" class="hero section">
+      <div><p class="eyebrow">{t.title}</p><h1>{t.intro}</h1><p class="lead">{t.lead}</p>
+        <div class="actions"><a class="button" href="#projects">{t.explore}</a><a class="text-link" href={profile.github} target="_blank" rel="noopener noreferrer">{t.github} ↗</a></div>
+      </div>
+      <img class="portrait" src="/img/user1.avif" alt="Santiago Spencer" width="400" height="400" fetchpriority="high" />
+    </section>
+    <section id="experience" class="section"><p class="eyebrow">01</p><h2>{t.experience}</h2><Timeline events={t.events} /></section>
+    <section id="projects" class="section"><p class="eyebrow">02</p><h2>{t.projects}</h2><p>{t.projectNote}</p>
+      <div class="project-grid">{projects.map((project, i) => <article class="project-card">
+        {project.image && <img src={project.image} alt={t.projectNames[i]} width="640" height="400" loading="lazy" />}
+        <div class="project-body"><h3>{t.projectNames[i]}</h3><p>{t.projectDescriptions[i]}</p>
+          <ul class="tags" aria-label={t.skills}>{project.stack.map(tech => <li>{tech}</li>)}</ul>
+          {project.url && <a class="text-link" href={project.url} target="_blank" rel="noopener noreferrer">{t.visit} ↗</a>}
+        </div>
+      </article>)}</div>
+    </section>
+    <section id="about-me" class="section about"><p class="eyebrow">03</p><h2>{t.about}</h2><p class="lead">{t.bio}</p></section>
+    <section id="skills" class="section"><p class="eyebrow">04</p><h2>{t.skills}</h2><ul class="tags skills">{profile.skills.map(tech => <li>{tech}</li>)}</ul></section>
+  </main>
+  <footer>{t.footer}</footer>
+</Layout>
+<script>
+  document.querySelector<HTMLAnchorElement>('[data-language-switch]')?.addEventListener('click', function () {
+    this.hash = window.location.hash;
+  });
+</script>
